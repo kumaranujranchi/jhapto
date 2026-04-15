@@ -88,6 +88,20 @@
         .tilt-hover:hover {
             transform: rotate(-1deg) scale(1.02);
         }
+
+        /* Animation System */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
     </style>
 </head>
 <body class="bg-surface font-body text-on-surface overflow-x-hidden">
@@ -111,7 +125,7 @@
 </nav>
 
 <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
-    <div class="text-center mb-20">
+    <div class="text-center mb-20 reveal">
         <div class="inline-block bg-inverse-surface text-primary font-label px-6 py-2 rounded-full text-sm mb-6 rotate-2">
             WARNING: HIGH VELOCITY CONTENT
         </div>
@@ -124,7 +138,7 @@
     <!-- Meme Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Meme 1 -->
-        <div class="bg-surface-container-lowest rounded-xl hard-shadow overflow-hidden tilt-hover transition-all">
+        <div class="bg-surface-container-lowest rounded-xl hard-shadow overflow-hidden tilt-hover transition-all reveal stagger-1">
             <img src="./assets/meme_speed.png" alt="Speed Force Rider" class="w-full h-auto border-b-4 border-outline">
             <div class="p-6">
                 <p class="font-headline text-xl uppercase italic mb-2">When you blink...</p>
@@ -133,14 +147,14 @@
         </div>
 
         <!-- Meme 2 (Funny text card) -->
-        <div class="bg-inverse-surface text-surface p-8 rounded-xl hard-shadow -rotate-2 flex flex-col justify-center min-h-[300px]">
+        <div class="bg-inverse-surface text-surface p-8 rounded-xl hard-shadow -rotate-2 flex flex-col justify-center min-h-[300px] reveal stagger-2">
             <span class="material-symbols-outlined text-6xl text-primary mb-6">psychology_alt</span>
             <h3 class="font-headline text-3xl uppercase leading-tight mb-4">"I haven't even finished the OTP..."</h3>
             <p class="font-label text-primary italic">The rider: "I guessed it. Here's your Vada Pav."</p>
         </div>
 
         <!-- Meme 3 -->
-        <div class="bg-surface-container-lowest rounded-xl hard-shadow overflow-hidden tilt-hover transition-all rotate-1">
+        <div class="bg-surface-container-lowest rounded-xl hard-shadow overflow-hidden tilt-hover transition-all rotate-1 reveal stagger-3">
             <div class="bg-tertiary p-4 text-white text-center font-label text-xs">OFFICIAL JHAPTO LORE</div>
             <div class="p-8">
                 <h4 class="font-headline text-4xl mb-4 italic leading-none">99% Snatch Rate</h4>
@@ -150,7 +164,7 @@
         </div>
 
         <!-- Meme 4 -->
-        <div class="col-span-1 md:col-span-2 bg-surface-container-low p-8 rounded-xl hard-shadow border-l-8 border-primary relative overflow-hidden">
+        <div class="col-span-1 md:col-span-2 bg-surface-container-low p-8 rounded-xl hard-shadow border-l-8 border-primary relative overflow-hidden reveal">
             <div class="absolute -right-10 -top-10 text-[10rem] opacity-5 font-black">LOL</div>
             <h3 class="font-headline text-4xl uppercase italic mb-6">Rider of the Month</h3>
             <div class="flex flex-col md:flex-row gap-8 items-center">
@@ -199,6 +213,24 @@
     document.addEventListener('DOMContentLoaded', () => {
         // Tracker Logic (Mini version for memes page)
         console.log("Jhapto Memes Loaded 🚀");
+
+        // Intersection Observer for Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
     });
 </script>
 </body></html>

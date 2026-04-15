@@ -92,6 +92,26 @@
             position: relative;
             transition: all 0.2s ease-out;
         }
+
+        /* Animation System */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body class="bg-surface font-body text-on-surface overflow-x-hidden">
@@ -116,7 +136,7 @@
 
 <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-        <div>
+        <div class="reveal">
             <h1 class="font-headline font-black text-6xl md:text-8xl leading-none tracking-tighter uppercase italic mb-8">
                 Community <span class="bg-error text-surface px-4">Gripes</span>
             </h1>
@@ -131,7 +151,7 @@
                 </div>
             </div>
         </div>
-        <div class="relative">
+        <div class="relative reveal-right">
             <img src="./assets/gripe_customer.png" alt="Complaining Customer" class="w-full h-auto rounded-xl hard-shadow -rotate-2">
             <div class="absolute -bottom-6 -right-6 bg-primary text-on-primary-container p-4 rounded-md hard-shadow rotate-6 font-headline font-bold">
                 BUT WHY?!
@@ -142,7 +162,7 @@
     <!-- Gripe Wall -->
     <div class="space-y-6 max-w-4xl mx-auto">
         <!-- Gripe 1 -->
-        <div class="bg-surface-container-lowest p-8 rounded-xl hard-shadow tilt-hover transition-all">
+        <div class="bg-surface-container-lowest p-8 rounded-xl hard-shadow tilt-hover transition-all reveal">
             <div class="flex justify-between items-start mb-4">
                 <div class="font-label font-black text-xs uppercase tracking-widest text-outline">Gripe #1102 - "Too much velocity"</div>
                 <div class="bg-error-container text-on-error-container px-2 py-0.5 rounded text-[10px] font-bold">IGNORED</div>
@@ -152,7 +172,7 @@
         </div>
 
         <!-- Gripe 2 -->
-        <div class="bg-surface-container-lowest p-8 rounded-xl hard-shadow tilt-hover transition-all border-l-8 border-primary">
+        <div class="bg-surface-container-lowest p-8 rounded-xl hard-shadow tilt-hover transition-all border-l-8 border-primary reveal">
             <div class="flex justify-between items-start mb-4">
                 <div class="font-label font-black text-xs uppercase tracking-widest text-outline">Gripe #1105 - "Snatching is mean"</div>
                 <div class="bg-error-container text-on-error-container px-2 py-0.5 rounded text-[10px] font-bold">ARCHIVED AS JOKE</div>
@@ -162,7 +182,7 @@
         </div>
 
         <!-- Gripe 3 -->
-        <div class="bg-surface-container-lowest p-8 rounded-xl hard-shadow tilt-hover transition-all">
+        <div class="bg-surface-container-lowest p-8 rounded-xl hard-shadow tilt-hover transition-all reveal">
             <div class="flex justify-between items-start mb-4">
                 <div class="font-label font-black text-xs uppercase tracking-widest text-outline">Gripe #1109 - "Rider did a backflip"</div>
                 <div class="bg-primary-container text-on-primary-container px-2 py-0.5 rounded text-[10px] font-bold">PROMOTED</div>
@@ -173,7 +193,7 @@
     </div>
 
     <!-- Interactive Fun -->
-    <div class="mt-20 text-center bg-inverse-surface p-12 rounded-xl text-surface hard-shadow max-w-2xl mx-auto overflow-hidden relative">
+    <div class="mt-20 text-center bg-inverse-surface p-12 rounded-xl text-surface hard-shadow max-w-2xl mx-auto overflow-hidden relative reveal">
         <div class="absolute inset-0 bg-primary opacity-5 pointer-events-none"></div>
         <h3 class="font-headline text-3xl uppercase italic mb-8">Still want to complain?</h3>
         <p class="font-body text-secondary-dim mb-10">Our 'Gripe Management System' is currently processing 0 complaints. Try to hit the button below to add yours!</p>
@@ -217,6 +237,24 @@
         });
 
         console.log("Jhapto Gripes Loaded 🙉");
+
+        // Intersection Observer for Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .reveal-right').forEach(el => {
+            observer.observe(el);
+        });
     });
 </script>
 </body></html>
