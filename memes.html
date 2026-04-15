@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JHAPTO | The Meme Vault</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;900&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#dfdcdc",
+                        "background": "#f9f6f5",
+                        "secondary-dim": "#4f4f4f",
+                        "error": "#b02500",
+                        "surface-dim": "#d6d4d3",
+                        "on-background": "#2f2f2e",
+                        "outline": "#787676",
+                        "on-primary-fixed": "#453900",
+                        "on-surface": "#2f2f2e",
+                        "on-secondary-fixed": "#3f3f3f",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#f95630",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary-container": "#601400",
+                        "secondary": "#5b5b5b",
+                        "secondary-container": "#e2e2e2",
+                        "primary": "#6c5a00",
+                        "inverse-primary": "#ffd709",
+                        "on-error": "#ffefec",
+                        "surface-container-highest": "#dfdcdc",
+                        "outline-variant": "#afadac",
+                        "on-secondary": "#f3f3f3",
+                        "on-error-container": "#520c00",
+                        "surface-container-high": "#e4e2e1",
+                        "on-primary": "#fff2cd",
+                        "on-tertiary-fixed-variant": "#701900",
+                        "tertiary": "#ac2c00",
+                        "on-primary-fixed-variant": "#665500",
+                        "secondary-fixed-dim": "#d4d4d4",
+                        "primary-fixed": "#ffd709",
+                        "error-dim": "#b92902",
+                        "inverse-surface": "#0e0e0e",
+                        "tertiary-container": "#ff9476",
+                        "tertiary-dim": "#972500",
+                        "surface-container": "#eae7e7",
+                        "on-tertiary-fixed": "#350700",
+                        "surface-container-low": "#f3f0ef",
+                        "primary-dim": "#5e4e00",
+                        "surface-tint": "#6c5a00",
+                        "on-surface-variant": "#5c5b5b",
+                        "on-secondary-fixed-variant": "#5b5b5b",
+                        "surface-bright": "#f9f6f5",
+                        "on-tertiary": "#ffefec",
+                        "inverse-on-surface": "#9e9c9c",
+                        "on-secondary-container": "#525252",
+                        "surface": "#f9f6f5",
+                        "primary-container": "#ffd709",
+                        "primary-fixed-dim": "#efc900",
+                        "on-primary-container": "#5b4b00",
+                        "tertiary-fixed": "#ff9476",
+                        "tertiary-fixed-dim": "#ff7d58"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px #787676;
+        }
+        .tilt-hover:hover {
+            transform: rotate(-1deg) scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f9f6f5]/70 backdrop-blur-md shadow-xl py-1">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<a href="index.html" class="text-3xl font-black italic text-[#ffd700] drop-shadow-[2px_2px_0px_#787676] font-['Epilogue'] uppercase tracking-tighter cursor-pointer no-underline">
+                JHAPTO
+            </a>
+<div class="hidden md:flex space-x-8 font-['Epilogue'] font-black uppercase tracking-tighter">
+<a class="text-[#787676] hover:skew-x-[-10deg] hover:text-[#ffd700] transition-transform" href="index.html">Speed</a>
+<a class="text-[#ffd700] border-b-4 border-[#ffd700] hover:skew-x-[-10deg] transition-transform" href="memes.html">Memes</a>
+<a class="text-[#787676] hover:skew-x-[-10deg] hover:text-[#ffd700] transition-transform" href="gripes.html">Gripes</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary-container font-label font-bold py-2 px-6 rounded-md hard-shadow hover:translate-y-[-2px] transition-all">
+                    SNATCH NOW
+                </button>
+</div>
+</div>
+</nav>
+
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+    <div class="text-center mb-20">
+        <div class="inline-block bg-inverse-surface text-primary font-label px-6 py-2 rounded-full text-sm mb-6 rotate-2">
+            WARNING: HIGH VELOCITY CONTENT
+        </div>
+        <h1 class="font-headline font-black text-6xl md:text-8xl leading-none tracking-tighter uppercase italic">
+            The Velocity <span class="bg-primary text-on-primary-container px-4">Vault</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-secondary-dim mt-6 italic">We ship fast. We meme faster.</p>
+    </div>
+
+    <!-- Meme Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Meme 1 -->
+        <div class="bg-surface-container-lowest rounded-xl hard-shadow overflow-hidden tilt-hover transition-all">
+            <img src="./assets/meme_speed.png" alt="Speed Force Rider" class="w-full h-auto border-b-4 border-outline">
+            <div class="p-6">
+                <p class="font-headline text-xl uppercase italic mb-2">When you blink...</p>
+                <p class="text-sm text-outline font-bold">And the rider is already in your fridge asking for water.</p>
+            </div>
+        </div>
+
+        <!-- Meme 2 (Funny text card) -->
+        <div class="bg-inverse-surface text-surface p-8 rounded-xl hard-shadow -rotate-2 flex flex-col justify-center min-h-[300px]">
+            <span class="material-symbols-outlined text-6xl text-primary mb-6">psychology_alt</span>
+            <h3 class="font-headline text-3xl uppercase leading-tight mb-4">"I haven't even finished the OTP..."</h3>
+            <p class="font-label text-primary italic">The rider: "I guessed it. Here's your Vada Pav."</p>
+        </div>
+
+        <!-- Meme 3 -->
+        <div class="bg-surface-container-lowest rounded-xl hard-shadow overflow-hidden tilt-hover transition-all rotate-1">
+            <div class="bg-tertiary p-4 text-white text-center font-label text-xs">OFFICIAL JHAPTO LORE</div>
+            <div class="p-8">
+                <h4 class="font-headline text-4xl mb-4 italic leading-none">99% Snatch Rate</h4>
+                <p class="text-secondary-dim text-sm">The 1% is just when the rider decides he's actually hungry and eats the parcel himself. Integrity.</p>
+            </div>
+            <div class="w-full h-2 bg-primary"></div>
+        </div>
+
+        <!-- Meme 4 -->
+        <div class="col-span-1 md:col-span-2 bg-surface-container-low p-8 rounded-xl hard-shadow border-l-8 border-primary relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-[10rem] opacity-5 font-black">LOL</div>
+            <h3 class="font-headline text-4xl uppercase italic mb-6">Rider of the Month</h3>
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <img src="./assets/ninja.png" class="w-40 h-40 rounded-full border-4 border-primary hard-shadow" alt="Top Rider">
+                <div>
+                    <p class="text-2xl font-black italic color-on-surface">"Speedy" Sameer</p>
+                    <p class="italic text-secondary-dim">Delivered 400 orders while the apps were still 'optimizing server routes'. Currently being investigated by ISRO for breaking the sound barrier.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meme 5 -->
+        <div class="bg-primary p-8 rounded-xl hard-shadow tilt-hover transition-all flex flex-col items-center text-center">
+            <span class="material-symbols-outlined text-6xl mb-4">electric_bolt</span>
+            <h3 class="font-headline text-2xl uppercase">Physics?</h3>
+            <p class="font-label text-sm font-bold mt-2">More like 'Physics-is-for-slow-people'.</p>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-[#dfdcdc] dark:bg-[#1a1a1a] w-full mt-20 rounded-t-[3rem] border-t-4 border-[#787676]">
+<div class="max-w-7xl mx-auto px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div>
+            <div class="text-xl font-black text-[#0e0e0e] dark:text-white font-headline uppercase mb-4 italic">JHAPTO</div>
+            <p class="font-['Space_Grotesk'] text-sm font-bold uppercase italic text-[#787676] dark:text-[#dfdcdc] mb-6">
+                © 2024 Jhapto. No groceries were harmed in the making of this speed.
+            </p>
+            <p class="text-sm font-bold uppercase italic text-[#787676] dark:text-[#dfdcdc]">
+                This website was designed just for fun by <a href="https://www.synergybrandarchitect.in" class="text-primary hover:underline" target="_blank">Synergy Brand Architect</a> 😄
+            </p>
+        </div>
+        <div class="flex flex-col md:items-end gap-6">
+            <div class="flex flex-wrap gap-4 font-['Space_Grotesk'] text-sm font-bold uppercase italic text-right">
+                <a class="text-[#787676] hover:text-[#ffd700] transition-all" href="index.html">Speed</a>
+                <a class="text-[#ffd700] transition-all" href="memes.html">Memes</a>
+                <a class="text-[#787676] hover:text-[#ffd700] transition-all" href="gripes.html">Gripes</a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+
+<!-- Same scripts for consistency -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Tracker Logic (Mini version for memes page)
+        console.log("Jhapto Memes Loaded 🚀");
+    });
+</script>
+</body></html>

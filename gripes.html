@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JHAPTO | Community Gripes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;900&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;family=Space+Grotesk:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#dfdcdc",
+                        "background": "#f9f6f5",
+                        "secondary-dim": "#4f4f4f",
+                        "error": "#b02500",
+                        "surface-dim": "#d6d4d3",
+                        "on-background": "#2f2f2e",
+                        "outline": "#787676",
+                        "on-primary-fixed": "#453900",
+                        "on-surface": "#2f2f2e",
+                        "on-secondary-fixed": "#3f3f3f",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#f95630",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary-container": "#601400",
+                        "secondary": "#5b5b5b",
+                        "secondary-container": "#e2e2e2",
+                        "primary": "#6c5a00",
+                        "inverse-primary": "#ffd709",
+                        "on-error": "#ffefec",
+                        "surface-container-highest": "#dfdcdc",
+                        "outline-variant": "#afadac",
+                        "on-secondary": "#f3f3f3",
+                        "on-error-container": "#520c00",
+                        "surface-container-high": "#e4e2e1",
+                        "on-primary": "#fff2cd",
+                        "on-tertiary-fixed-variant": "#701900",
+                        "tertiary": "#ac2c00",
+                        "on-primary-fixed-variant": "#665500",
+                        "secondary-fixed-dim": "#d4d4d4",
+                        "primary-fixed": "#ffd709",
+                        "error-dim": "#b92902",
+                        "inverse-surface": "#0e0e0e",
+                        "tertiary-container": "#ff9476",
+                        "tertiary-dim": "#972500",
+                        "surface-container": "#eae7e7",
+                        "on-tertiary-fixed": "#350700",
+                        "surface-container-low": "#f3f0ef",
+                        "primary-dim": "#5e4e00",
+                        "surface-tint": "#6c5a00",
+                        "on-surface-variant": "#5c5b5b",
+                        "on-secondary-fixed-variant": "#5b5b5b",
+                        "surface-bright": "#f9f6f5",
+                        "on-tertiary": "#ffefec",
+                        "inverse-on-surface": "#9e9c9c",
+                        "on-secondary-container": "#525252",
+                        "surface": "#f9f6f5",
+                        "primary-container": "#ffd709",
+                        "primary-fixed-dim": "#efc900",
+                        "on-primary-container": "#5b4b00",
+                        "tertiary-fixed": "#ff9476",
+                        "tertiary-fixed-dim": "#ff7d58"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px #787676;
+        }
+        .tilt-hover:hover {
+            transform: rotate(-1deg) scale(1.02);
+        }
+        #runaway-btn {
+            position: relative;
+            transition: all 0.2s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f9f6f5]/70 backdrop-blur-md shadow-xl py-1">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<a href="index.html" class="text-3xl font-black italic text-[#ffd700] drop-shadow-[2px_2px_0px_#787676] font-['Epilogue'] uppercase tracking-tighter cursor-pointer no-underline">
+                JHAPTO
+            </a>
+<div class="hidden md:flex space-x-8 font-['Epilogue'] font-black uppercase tracking-tighter">
+<a class="text-[#787676] hover:skew-x-[-10deg] hover:text-[#ffd700] transition-transform" href="index.html">Speed</a>
+<a class="text-[#787676] hover:skew-x-[-10deg] hover:text-[#ffd700] transition-transform" href="memes.html">Memes</a>
+<a class="text-[#ffd700] border-b-4 border-[#ffd700] hover:skew-x-[-10deg] transition-transform" href="gripes.html">Gripes</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-on-primary-container font-label font-bold py-2 px-6 rounded-md hard-shadow hover:translate-y-[-2px] transition-all">
+                    SNATCH NOW
+                </button>
+</div>
+</div>
+</nav>
+
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+            <h1 class="font-headline font-black text-6xl md:text-8xl leading-none tracking-tighter uppercase italic mb-8">
+                Community <span class="bg-error text-surface px-4">Gripes</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-secondary-dim border-l-8 border-error pl-6 italic mb-8 font-label">
+                "Stop delivering my food before I order it!" — Tired Customer.
+            </p>
+            <div class="bg-surface-container-high p-8 rounded-xl hard-shadow rotate-1">
+                <p class="font-bold text-sm uppercase mb-2">Our Response Strategy:</p>
+                <div class="flex items-center gap-4 text-error font-black italic">
+                    <span class="material-symbols-outlined">delete_forever</span>
+                    <span>AUTOMATICALLY DIRECTED TO SPAM</span>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <img src="./assets/gripe_customer.png" alt="Complaining Customer" class="w-full h-auto rounded-xl hard-shadow -rotate-2">
+            <div class="absolute -bottom-6 -right-6 bg-primary text-on-primary-container p-4 rounded-md hard-shadow rotate-6 font-headline font-bold">
+                BUT WHY?!
+            </div>
+        </div>
+    </div>
+
+    <!-- Gripe Wall -->
+    <div class="space-y-6 max-w-4xl mx-auto">
+        <!-- Gripe 1 -->
+        <div class="bg-surface-container-lowest p-8 rounded-xl hard-shadow tilt-hover transition-all">
+            <div class="flex justify-between items-start mb-4">
+                <div class="font-label font-black text-xs uppercase tracking-widest text-outline">Gripe #1102 - "Too much velocity"</div>
+                <div class="bg-error-container text-on-error-container px-2 py-0.5 rounded text-[10px] font-bold">IGNORED</div>
+            </div>
+            <p class="italic text-lg color-secondary-dim mb-4">"I ordered a pizza. The delivery guy arrived 4 minutes before I even opened the app. Now I have a pizza from the future and I'm scared. My cat is judging me."</p>
+            <div class="bg-surface-container-low p-4 rounded text-xs italic text-secondary">JHAPTO Reply: "Skill issue. Try ordering slower next time."</div>
+        </div>
+
+        <!-- Gripe 2 -->
+        <div class="bg-surface-container-lowest p-8 rounded-xl hard-shadow tilt-hover transition-all border-l-8 border-primary">
+            <div class="flex justify-between items-start mb-4">
+                <div class="font-label font-black text-xs uppercase tracking-widest text-outline">Gripe #1105 - "Snatching is mean"</div>
+                <div class="bg-error-container text-on-error-container px-2 py-0.5 rounded text-[10px] font-bold">ARCHIVED AS JOKE</div>
+            </div>
+            <p class="italic text-lg color-secondary-dim mb-4">"A Jhapto rider snatched my parcel from a Zomato guy at a traffic light. The Zomato guy started crying and now he's my roommate. We're both very confused."</p>
+            <div class="bg-surface-container-low p-4 rounded text-xs italic text-secondary">JHAPTO Reply: "We just saved him a trip. You're welcome for the free roommate."</div>
+        </div>
+
+        <!-- Gripe 3 -->
+        <div class="bg-surface-container-lowest p-8 rounded-xl hard-shadow tilt-hover transition-all">
+            <div class="flex justify-between items-start mb-4">
+                <div class="font-label font-black text-xs uppercase tracking-widest text-outline">Gripe #1109 - "Rider did a backflip"</div>
+                <div class="bg-primary-container text-on-primary-container px-2 py-0.5 rounded text-[10px] font-bold">PROMOTED</div>
+            </div>
+            <p class="italic text-lg color-secondary-dim mb-4">"My biryani was handed over during a 360-degree backflip. The rider didn't even touch the ground. My balcony is on the 4th floor. Is Jhapto hiring Kryptonians?"</p>
+            <div class="bg-surface-container-low p-4 rounded text-xs italic text-secondary">JHAPTO Reply: "New training manual: 'Air is for Slow People'. Please tip in gravity-defying currency."</div>
+        </div>
+    </div>
+
+    <!-- Interactive Fun -->
+    <div class="mt-20 text-center bg-inverse-surface p-12 rounded-xl text-surface hard-shadow max-w-2xl mx-auto overflow-hidden relative">
+        <div class="absolute inset-0 bg-primary opacity-5 pointer-events-none"></div>
+        <h3 class="font-headline text-3xl uppercase italic mb-8">Still want to complain?</h3>
+        <p class="font-body text-secondary-dim mb-10">Our 'Gripe Management System' is currently processing 0 complaints. Try to hit the button below to add yours!</p>
+        <button id="runaway-btn" class="bg-primary text-on-primary-container font-headline font-black text-xl py-6 px-10 rounded-lg hard-shadow transition-all">
+            SUBMIT GRIPE (IF YOU CAN)
+        </button>
+    </div>
+</main>
+
+<footer class="bg-[#dfdcdc] dark:bg-[#1a1a1a] w-full mt-20 rounded-t-[3rem] border-t-4 border-[#787676]">
+<div class="max-w-7xl mx-auto px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div>
+            <div class="text-xl font-black text-[#0e0e0e] dark:text-white font-headline uppercase mb-4 italic">JHAPTO</div>
+            <p class="font-['Space_Grotesk'] text-sm font-bold uppercase italic text-[#787676] dark:text-[#dfdcdc] mb-6">
+                © 2024 Jhapto. No groceries were harmed in the making of this speed.
+            </p>
+            <p class="text-sm font-bold uppercase italic text-[#787676] dark:text-[#dfdcdc]">
+                This website was designed just for fun by <a href="https://www.synergybrandarchitect.in" class="text-primary hover:underline" target="_blank">Synergy Brand Architect</a> 😄
+            </p>
+        </div>
+        <div class="flex flex-col md:items-end gap-6">
+            <div class="flex flex-wrap gap-4 font-['Space_Grotesk'] text-sm font-bold uppercase italic text-right">
+                <a class="text-[#787676] hover:text-[#ffd700] transition-all" href="index.html">Speed</a>
+                <a class="text-[#787676] hover:text-[#ffd700] transition-all" href="memes.html">Memes</a>
+                <a class="text-[#ffd700] transition-all" href="gripes.html">Gripes</a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('runaway-btn');
+        
+        btn.addEventListener('mouseover', () => {
+            const x = (Math.random() - 0.5) * 400;
+            const y = (Math.random() - 0.5) * 200;
+            btn.style.transform = `translate(${x}px, ${y}px) rotate(${(Math.random()-0.5)*20}deg)`;
+        });
+
+        console.log("Jhapto Gripes Loaded 🙉");
+    });
+</script>
+</body></html>
